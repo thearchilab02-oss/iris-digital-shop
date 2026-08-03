@@ -7,14 +7,6 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"/>
   <link rel="stylesheet" href="/assets/index-BdO-xlWX.css" type="text/css"/>
-
-  <!-- Paddle V2 Script -->
-  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-  <script>
-    Paddle.Initialize({ 
-      token: "live_c36d8c2dab2d89176075b5c2922" 
-    });
-  </script>
 </head>
 <body class="bg-[#fbf7f0] text-[#2c2620]">
 
@@ -48,8 +40,8 @@
                 <span class="font-display text-3xl text-[var(--terracotta)]">$11.99</span>
               </div>
 
-              <!-- Clickable Buy Button -->
-              <a href="javascript:void(0)" onclick="openPaddleCheckout()" style="cursor: pointer;" class="mt-8 inline-block w-full rounded-full bg-[#b85c3e] px-8 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#a04e33] md:w-auto">
+              <!-- Clickable Direct Buy Button -->
+              <a href="https://buy.paddle.com/checkout/custom?price_id=pri_01kyyz13twv0rjf225x066vjf0" class="mt-8 inline-block w-full rounded-full bg-[#b85c3e] px-8 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#a04e33] md:w-auto">
                 Buy Now
               </a>
 
@@ -60,25 +52,5 @@
     </main>
   </div>
 
-  <script>
-    function openPaddleCheckout() {
-      if (typeof Paddle !== 'undefined') {
-        Paddle.Checkout.open({
-          items: [{ priceId: 'pri_01kyyz13twv0rjf225x066vjf0', quantity: 1 }],
-          settings: {
-            displayMode: 'overlay',
-            theme: 'dark',
-            successUrl: 'https://digitalsbyiris.netlify.app'
-          }
-        });
-      } else {
-        alert("Payment gateway is loading. Please wait 3 seconds and click again!");
-      }
-    }
-  </script>
-
 </body>
 </html>
-<a href="https://buy.paddle.com/checkout/custom?price=pro_01kyyynxr09pyay2j83h3c9rze" class="mt-8 inline-block w-full rounded-full bg-[#b85c3e] px-8 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#a04e33] md:w-auto">
-  Buy Now
-</a>
